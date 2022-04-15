@@ -22,14 +22,18 @@
 	   
 
        <div class="col-md-12 job-from" height="400px;" > 
-              
+       <div class="col-md-4" > 
+       <h1><?= $data['img_dir'] ?></h1>
+       </div>
+       <div class="col-md-8" > 
+       
                 <h1><?= $data['title'] ?></h1>
 
                 
                 <h3>Job Requirement :   <?= $data['requirement'] ?></h3>
                 <h3>Job Duty :   <?= $data['duty'] ?></h3>
                 <h3>Job Salary :   <?= $data['salary'] ?></h3>
-                
+          
                 
 
                  <?php
@@ -49,7 +53,7 @@
 
 				 ?>
                  
-               
+                 </div>
         </div>
 
 

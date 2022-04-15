@@ -41,8 +41,10 @@
     <div class="container">
       <div class="single">
         <div class="col-md-12 view-app profile" data-aos="zoom-in" data-aos-duration="1500">
-          <img src="<?=$data['img_dir']?>"  width="100" height="100"></img>
-          <hr>
+        <div class="col-md-4">
+        <img src="<?=$data['img_dir']?>"  width="100" height="100"></img>
+        </div>
+          <div class="col-md-8">
           <ul class="list-group">
                       <li class="list-group-item">
                         <h6 class="mb-0"><i class="fa-regular fa-id-card"></i>&emsp;Empid:</h6>
@@ -65,6 +67,7 @@
                         <span class="text-secondary"><?=$data['date']?></span>
                       </li>
           </ul>
+          </div>
         </div>
       </div>
     </div>
