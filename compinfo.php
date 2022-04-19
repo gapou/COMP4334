@@ -20,7 +20,7 @@ $row= mysqli_fetch_array($result);
 
 <div>
     <?php include('comnav.php'); ?>
-    <div class="container">
+    <div class="container container-card2" data-aos="zoom-in" data-aos-duration="1500">
     <div class="card">
     <div>
         <img class="profile" src=<?php echo $filename; ?> alt="" width="100" height="100">

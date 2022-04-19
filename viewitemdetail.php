@@ -20,7 +20,7 @@ $row= mysqli_fetch_array($result);
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <?php include('usernav.php'); ?>
+
     <table>
         <tr>
             <th>

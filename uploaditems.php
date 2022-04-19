@@ -62,7 +62,8 @@ if($stmt = $mysqli->prepare($sql)){
 </head>
 <body>
 <?php include('comnav.php'); ?>
-<div class="container">
+<div class="container container-card" data-aos="zoom-in" data-aos-duration="1500">
+<div class="card" >
     <h1>Upload New Items</h1>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" enctype="multipart/form-data">
 
@@ -99,5 +100,6 @@ if($stmt = $mysqli->prepare($sql)){
                 <span class="err"><?php echo $msg; ?></span>
             </form>
             </div>
+</div>
 </body>
 </html>

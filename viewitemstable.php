@@ -30,7 +30,7 @@ $resultitem = $mysqli->query($sql);
 </head>
 <body>
     <?php include('comnav.php'); ?>
-    <div class="container">
+    <div class="container" >
     <h1>Your Items in Table Form:</h1>
 
 
@@ -38,7 +38,7 @@ $resultitem = $mysqli->query($sql);
         if($resultitem -> num_rows >0){
         ?>
         
-        <table class="job">
+        <table class="job" data-aos="fade-up" data-aos-duration="1500">
             <tr>
                 <th>Photo</th>
                 <th>Name</th>

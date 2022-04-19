@@ -185,6 +185,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 </head>
 <body>
 <!-- Top menu -->
+<div class="overlay3"></div><div class="overlay2"></div>
+<div class="container">
+<div class="login2">  
     <div class="center">       
         <h1>Sign Up</h1>
         <p>Please fill this form to create an account.</p>
@@ -192,8 +195,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
             
             <div>
-                <label>Profile img</label>
-                <p><input type="file" accept="image/*" name="profile_img"></p>
+                <p>Profile image:<input type="file" accept="image/*" name="profile_img"></p>
                 <span class="err"><?php echo $img_err; ?></span>
             </div>
 
@@ -248,6 +250,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             </div>
             <p>Already have an account? <a href="index.php">Login here</a>.</p>
         </form>
-    </div>    
+    </div> 
+</div> 
+</div>
 </body>
 </html>

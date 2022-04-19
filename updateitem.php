@@ -39,7 +39,10 @@ setcookie('itemidcookie',$_GET['itemid'],time()+50000);
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <?php include('comnav.php'); ?>
+    <div class="container container-card" data-aos="zoom-in" data-aos-duration="1500">
+    <div class="card">
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" enctype="multipart/form-data">
         <div><?php if(isset($message)) { echo $message; } ?></div>
         <div style="padding-bottom:5px;"></div>
@@ -59,5 +62,7 @@ setcookie('itemidcookie',$_GET['itemid'],time()+50000);
         <input type="submit" name="submit" value="Submit" class="but">
 
 </form>
+</div>
+</div>
 </body>
 </html>

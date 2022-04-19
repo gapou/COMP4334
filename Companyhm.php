@@ -32,7 +32,7 @@ $resultitem = $mysqli->query($sql);
 </head>
 <body>
     <?php include('comnav.php'); ?>
-    <div class="container">
+    <div class="container" >
     <h2> Welcome! <?php echo "User Name/Company: " . $rowusers["username"] ?> </h2>
     <a href="uploaditems.php">Upload Items</a>
     <br>
@@ -43,7 +43,7 @@ $resultitem = $mysqli->query($sql);
     <?php
             if($resultitem -> num_rows >0){
             ?>
-            <table>
+            <table data-aos="fade-up" data-aos-duration="1500">
                 <tr>
                     <th>Photo</th>
                     <th>Name</th>

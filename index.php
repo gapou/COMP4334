@@ -164,7 +164,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     <button class="but" type="submit" name="login" value='login'>Login</button>
                 </form>
                 <div id="footer-box">
-                    <p>Register to be our member? <a href="/register.php" class="sign-up">Sign up now</a></p>
+                    <p>Register to be our member? <a href="register.php" class="sign-up">Sign up now</a></p>
                 </div>
             </div>
         </div>

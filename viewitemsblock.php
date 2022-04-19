@@ -33,32 +33,38 @@ $resultitem = $mysqli->query($sql);
     <div class="container">
     <h1>Your Items in Table Form:</h1>
 
-
+    <div class="grid">
 <?php
         if($resultitem -> num_rows >0){
             $countrow = 0;
                 while($rowitems = $resultitem-> fetch_assoc()){
                 ?> 
-                <div class="card">
-                <div class="col-md-4">
+                <div class="card" data-aos="flip-up" data-aos-duration="1000">
+                
                 Photo: <br>
                 
                 <img class="profile" src=<?php echo $filename.$rowitems["photo_img"]; ?> alt="" width="100" height="100"><br>
+                <div class="item-col">
+                    <div class="item-left">Name:</div><div class="item-right" > <?php echo $rowitems["name"];?></div>
                 </div>
-                <div class="col-md-8">
-                Name: <?php echo $rowitems["name"];?><br>
-                
-                Discription: <?php echo $rowitems["discription"];?><br>
-                
-                Price: $<?php echo $rowitems["price"];?><br>
-                
-                Update/View: <a href="updateitem.php?itemid=<?php echo $rowitems["itemid"]; ?>">Update</a><br>
-                
-                Delete: <a href="deleteitems.php?itemid=<?php echo $rowitems["itemid"]; ?>">Delete</a><br>
-                
-                Item Purchase Record: <a href="itempurchase.php?itemid=<?php echo $rowitems["itemid"]; ?>">History</a><br>
-                <br>
+                <div class="item-col">
+                    <div class="item-left">Discription:</div><div class="item-right" > <?php echo $rowitems["discription"];?></div>
                 </div>
+                <div class="item-col">
+                    <div class="item-left">Price:</div><div class="item-right" > <?php echo $rowitems["price"];?></div>
+                </div>
+                <div class="item-col">
+                    <div class="item-left">Update/View:</div><div class="item-right" > <a href="updateitem.php?itemid=<?php echo $rowitems["itemid"]; ?>">Update</a></div>
+                </div>
+                <div class="item-col">
+                    <div class="item-left">Delete:</div><div class="item-right" ><a href="deleteitems.php?itemid=<?php echo $rowitems["itemid"]; ?>">Delete</a></div>
+                </div>
+                <div class="item-col">
+                    <div class="item-left">Item Purchase Record:</div><div class="item-right" > <a href="itempurchase.php?itemid=<?php echo $rowitems["itemid"]; ?>">History</a></div>
+                </div>
+
+
+               
                 </div>
 
             <?php
@@ -70,7 +76,7 @@ $resultitem = $mysqli->query($sql);
         echo "No result";
         }
         ?>
-    
+    </div>
 
     </div>
 </body>

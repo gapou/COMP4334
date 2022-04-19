@@ -34,20 +34,33 @@ $resultitem = $mysqli->query($sql);
 
     <h1>Avilible Items in Table Form:</h1>
 
-
+    <div class="grid">
 <?php
         if($resultitem -> num_rows >0){
             $countrow = 0;
                 while($rowitems = $resultitem-> fetch_assoc()){
                 ?>
+            <div class="card">
                 Photo: <br>
                 <img class="profile" src=<?php echo $filename.$rowitems["photo_img"]; ?> alt="" width="100" height="100"><br>
-                Name: <?php echo $rowitems["name"];?><br>
-                Discription: <?php echo $rowitems["discription"];?><br>
-                Price: $<?php echo $rowitems["price"];?><br>
-                View: <a href="viewitemdetail.php?itemid=<?php echo $rowitems["itemid"]; ?>">View</a><br>
-                Add to Cart: <a href="addtocart.php?itemid=<?php echo $row["itemid"]; ?>">Add to cart</a><br>
+                <div class="item-col">
+                    <div class="item-left">Name:</div><div class="item-right" > <?php echo $rowitems["name"];?></div>
+                </div>
+                <div class="item-col">
+                    <div class="item-left">Discription:</div><div class="item-right" > <?php echo $rowitems["discription"];?></div>
+                </div>
+                <div class="item-col">
+                    <div class="item-left">Price:</div><div class="item-right" > <?php echo $rowitems["price"];?></div>
+                </div>
+                <div class="item-col">
+                    <div class="item-left">View:</div><div class="item-right" > <a href="viewitemdetail.php?itemid=<?php echo $rowitems["itemid"]; ?>">View</a></div>
+                </div>
+                <div class="item-col">
+                    <div class="item-left">Add to Cart:</div><div class="item-right" > <a href="addtocart.php?itemid=<?php echo $row["itemid"]; ?>">Add to cart</a></div>
+                </div>
+
                 <br>
+                </div>
             <?php
             $countrow++;
             }
@@ -58,7 +71,7 @@ $resultitem = $mysqli->query($sql);
         }
         ?>
     
-
+    </div>
     </div>
 </body>
 </html>

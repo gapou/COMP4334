@@ -38,10 +38,10 @@ $resultitem = $mysqli->query($sql);
 <body>
     <?php include('usernav.php'); ?>
  
-    <h2> Welcome! <?php echo $rowusers["username"] ?> </h2>
+    
 
     <div class="container">
-    <h2>Photo</h2>  
+    <h2> Welcome! <?php echo $rowusers["username"] ?> </h2>
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -75,12 +75,12 @@ $resultitem = $mysqli->query($sql);
       <span class="sr-only">Next</span>
     </a>
     </div>
-    </div>
 
 
 
-    <a href="purchasehistory.php">Purchase History</a>
-    <h3> Avilible Items:</h3>
+
+
+    <h1> Avilible Items:</h1>
 
 
     <?php
@@ -117,7 +117,7 @@ $resultitem = $mysqli->query($sql);
 
             </table>
 
-            
+            </div>
 
             <?php
             }
