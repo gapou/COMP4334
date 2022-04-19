@@ -38,23 +38,29 @@ $resultitem = $mysqli->query($sql);
 <body>
     <?php include('usernav.php'); ?>
  
-    
+
 
     <div class="container">
-    <h2> Welcome! <?php echo $rowusers["username"] ?> </h2>
+    
 
+    <div class="home-ov" data-aos="zoom-in" data-aos-duration="1500">
+    <div class="home-info">
+    
+                              <h3>professional Pet E-Commerce Shop</h3>
+                              <h1>We provid the best your need here!</h1>
+                              <h2> Welcome! <?php echo $rowusers["username"] ?> </h2>
 
-
-
-
-
+    </div>
+    </div>
+    
+    <div class="home-ph">
     <h1> Avilible Items:</h1>
-
+    </div>
 
     <?php
             if($resultitem -> num_rows >0){
             ?>
-            <table data-aos="fade-up" data-aos-duration="1500">
+            <table data-aos="fade-up" data-aos-duration="1500" class="usertable">
                 <tr>
                     <th>Photo</th>
                     <th>Name</th>

@@ -185,9 +185,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 </head>
 <body>
 <!-- Top menu -->
-<div class="overlay3"></div><div class="overlay2"></div>
+<div class="overlay3"></div><div class="overlay2 overlay22" ></div>
 <div class="container">
-<div class="login2">  
+<div class="login2 login22">  
     <div class="center">       
         <h1>Sign Up</h1>
         <p>Please fill this form to create an account.</p>

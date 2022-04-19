@@ -19,11 +19,44 @@ input {
   height: 100%;
   z-index: -2;
 }
+.home-ov {
+  background-color: #e5e5f7;
+  opacity: 0.8;
+  background-image: radial-gradient(circle at center center, #45f7e7, #e5e5f7),
+    repeating-radial-gradient(
+      circle at center center,
+      #45f7e7,
+      #45f7e7,
+      10px,
+      transparent 20px,
+      transparent 10px
+    );
+  background-blend-mode: multiply;
+  padding: 10px;
+  border-radius: 1000px;
+  height: 80%;
+}
+
+.home-info {
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  overflow: hidden;
+}
+.home-info h3 {
+  color: #2075ed;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin: 10px 0;
+}
 .overlay3 {
   background: url("img/home2.jpg") no-repeat center center;
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 120%;
   z-index: -2;
 }
 .overlay2 {
@@ -37,6 +70,9 @@ input {
   width: 100%;
   height: 100%;
   z-index: -1;
+}
+.overlay22 {
+  height: 120%;
 }
 .container {
   display: flex;
@@ -70,6 +106,7 @@ input {
   background: #f7cc9e;
   border-radius: 50px;
   transition: 0.5s ease-out;
+  width: 40vw;
 }
 .navbar {
   overflow: hidden;
@@ -222,6 +259,9 @@ td:nth-child(7) {
 .info-table td {
   text-align: right;
 }
+.usertable th {
+  text-align: center;
+}
 
 .iframe {
   width: 100%;
@@ -266,4 +306,29 @@ td:nth-child(7) {
     grid-row-gap: 2em;
     padding: 10px;
   }
+}
+
+.bgimg-1,
+.bgimg-2,
+.bgimg-3 {
+  position: relative;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bgimg-1 {
+  background-image: url("https://www.polyu.edu.hk/-/media/department/home/content/about-polyu/strategic-plan_2_1080x524.jpg?bc=ffffff&h=262&w=540&hash=9ADF50BE4C65546D3223DE45AC9B81CC");
+  min-height: 100%;
+}
+
+.bgimg-2 {
+  background-image: url("https://www.polyu.edu.hk/-/media/department/home/photowall/about-polyu_photowall/aboutpolyu_campus6.png?mh=840&mw=840&hash=EF40260340F9AF409295743626B8EC6A");
+  min-height: 400px;
+}
+
+.bgimg-3 {
+  background-image: url("https://www.polyu.edu.hk/-/media/department/home/photowall/about-polyu_photowall/aboutpolyu_campus7.png?mh=840&mw=840&hash=DD9DA8CA9B2B31F1942E299310B1DDA6");
+  min-height: 400px;
 }

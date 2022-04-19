@@ -94,7 +94,7 @@ if($stmt = $mysqli->prepare($sql)){
                 <br>
 
                 <div>
-                    <button class="btn"><input class="but" type="submit" value="Submit"></button>&nbsp;&nbsp;&nbsp;
+                    <button class="btn"><input class="but" type="submit" value="Submit"></button>&nbsp;&nbsp;
                     <button class="btn"><input class="but" type="reset" value="Reset"></button>
                     
                     

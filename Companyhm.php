@@ -33,7 +33,7 @@ $resultitem = $mysqli->query($sql);
 <body>
     <?php include('comnav.php'); ?>
     <div class="container" >
-    <h2> Welcome! <?php echo "User Name/Company: " . $rowusers["username"] ?> </h2>
+    <h2> Welcome!<br><br> <?php echo "User Name/Company: " . $rowusers["username"] ?> </h2>
     <div class="item-col-ar">
     <button class="btn"><a href="uploaditems.php">Upload Items</a></button>
     <br>
