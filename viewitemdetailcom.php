@@ -21,54 +21,67 @@ $row= mysqli_fetch_array($result);
 </head>
 <body>
 
-    <table>
-        <tr>
-            <th>
-            Items ID:
-            </th>
-            <td> 
-            <?php echo $row['itemid']; ?>
-            </td>
-        </tr>
-
-        <tr>
-            <th>
-            Name:
-            </th>
-            <td>
-            <?php echo $row['name']; ?>
-            </td>
-        </tr>
-
-        <tr>
-            <th>
-            Description:
-            </th>
-            <td>
-            <?php echo $row['discription']; ?>
-            </td>
-        </tr>
-
-
-        <tr>
-            <th>
-            Price(HKD):<br>
-            </th>
-            <td>
-            <?php echo $row['price']; ?>
-            </td>
-        </tr>
-
-        <tr>
-            <th>
-            Photo:
-            </th>
-            <td>
-            <img class="profile" src=<?php echo $filename.$row["photo_img"]; ?> alt="" width="100" height="100">
-            </td>
-        </tr>
-
-    </table>
+<div class="container container-card item-table">
+        
     
+
+    
+        <table>
+        <tr>
+                <th colspan="2">
+                <img class="profile" src=<?php echo $filename.$row["photo_img"]; ?> alt="" width="100" height="100">
+                </th>
+    
+            </tr>
+    
+            <tr>
+                <th>
+                Items ID:
+                </th>
+                <td>
+                <?php echo $row['itemid']; ?>
+                </td>
+            </tr>
+    
+            <tr>
+                <th>
+                Name:
+                </th>
+                <td>
+                <?php echo $row['name']; ?>
+                </td>
+            </tr>
+    
+            <tr>
+                <th>
+                Description:
+                </th>
+                <td>
+                <?php echo $row['discription']; ?>
+                </td>
+            </tr>
+    
+    
+            <tr>
+                <th>
+                Price(HKD):<br>
+                </th>
+                <td>
+                <?php echo $row['price']; ?>
+                </td><br>
+            </tr>
+                
+            <tr>
+                <th colspan="2">
+                <br>
+                </th>
+    
+            </tr>
+    
+        </table>
+    
+        
+        
+        </div>
 </body>
 </html>

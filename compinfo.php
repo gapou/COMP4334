@@ -28,7 +28,7 @@ $row= mysqli_fetch_array($result);
 
 
     <div>
-        <table>
+        <table class="info-table">
         <tr>
             <th>Username:</th>
             <td><?php echo $row["username"]; ?></td>
@@ -50,7 +50,8 @@ $row= mysqli_fetch_array($result);
             <td><?php echo $row["address"]; ?></td>
         </tr>
         </table>
-        <a href="updateinfocom.php?userid=<?php echo $row["uid"]; ?>">Update Info</a><br>
+        <button class="btn"><a href="updateinfocom.php?userid=<?php echo $row["uid"]; ?>">Update Info</a></button>
+        <br>
 
     </div>
 

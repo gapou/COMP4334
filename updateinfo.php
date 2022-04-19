@@ -39,24 +39,28 @@ setcookie('usercookie',$_GET['userid'],time()+50000);
 </head>
 <body>
     <?php include('comnav.php'); ?>
+    <div class="container container-card" data-aos="zoom-in" data-aos-duration="1500">
+    <div class="card">
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" enctype="multipart/form-data">
         <div><?php if(isset($message)) { echo $message; } ?></div>
         <div style="padding-bottom:5px;"></div>
     ID: <br>
         <input disabled="true" type="text" name="id"  value="<?php echo $row['uid']; ?>">
-        <br>
+        <br><br>
     User Name: <br>
         <input disabled="true" type="text" name= "name" value="<?php echo $row['username']; ?>">
-        <br>
+        <br><br>
     Nick Name:<br>
         <input type="text" name="nick_name" value="<?php echo $row['nick_name']; ?>">
-        <br>
+        <br><br>
     Address:<br>
         <input type="text" name="address" value="<?php echo $row['address']; ?>">
-        <br>
-
-        <input type="submit" name="submit" value="Submit" class="but">
+        <br><br>
+        <button class="btn"><input type="submit" name="submit" value="Submit" class="but"></button>
+        
 
 </form>
+</div>
+</div>
 </body>
 </html>

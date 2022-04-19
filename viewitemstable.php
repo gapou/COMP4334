@@ -58,9 +58,9 @@ $resultitem = $mysqli->query($sql);
                 <td> <?php echo $rowitems["name"];?></td>
                 <td><?php echo $rowitems["discription"];?></td>
                 <td>$<?php echo $rowitems["price"];?></td>
-                <td><a href="updateitem.php?itemid=<?php echo $rowitems["itemid"]; ?>">Update</a></td>
-                <td><a href="deleteitems.php?itemid=<?php echo $rowitems["itemid"]; ?>">Delete</a></td>
-                <td><a href="itempurchase.php?itemid=<?php echo $rowitems["itemid"]; ?>">History</a></td>
+                <td><button class="btn"><a href="updateitem.php?itemid=<?php echo $rowitems["itemid"]; ?>">Update</a></button></td>
+                <td><button class="btn"><a href="deleteitems.php?itemid=<?php echo $rowitems["itemid"]; ?>">Delete</a></button></td>
+                <td><button class="btn"><a href="itempurchase.php?itemid=<?php echo $rowitems["itemid"]; ?>">History</a></button></td>
                 </tr>
             <?php
             $countrow++;

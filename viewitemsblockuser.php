@@ -40,7 +40,7 @@ $resultitem = $mysqli->query($sql);
             $countrow = 0;
                 while($rowitems = $resultitem-> fetch_assoc()){
                 ?>
-            <div class="card">
+            <div class="card" data-aos="flip-up" data-aos-duration="1500">
                 Photo: <br>
                 <img class="profile" src=<?php echo $filename.$rowitems["photo_img"]; ?> alt="" width="100" height="100"><br>
                 <div class="item-col">

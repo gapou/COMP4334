@@ -38,7 +38,7 @@ $resultitem = $mysqli->query($sql);
 <?php
         if($resultitem -> num_rows >0){
         ?>
-        <table>
+        <table data-aos="fade-up" data-aos-duration="1500">
                 <tr>
                     <th>Photo</th>
                     <th>Name</th>
@@ -58,8 +58,9 @@ $resultitem = $mysqli->query($sql);
                     <td> <?php echo $rowitems["company"];?></td>
                     <td><?php echo $rowitems["discription"];?></td>
                     <td>$<?php echo $rowitems["price"];?></td>
-                    <td><a href="viewitemdetail.php?itemid=<?php echo $rowitems["itemid"]; ?>">View</a></td>
-                    <td><a href="addtocart.php?itemid=<?php echo $row["itemid"]; ?>">Add to cart</a></td>
+                    <td><button class="btn"><a href="viewitemdetail.php?itemid=<?php echo $rowitems["itemid"]; ?>">View</a></button></td>
+                    <td><button class="btn"><a href="addtocart.php?itemid=<?php echo $row["itemid"]; ?>">Add to cart</a></button></td>
+      
                     </tr>
                 <?php
 			    $countrow++;

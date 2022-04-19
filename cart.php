@@ -75,7 +75,7 @@ $resultjob = $mysqli->query($sqlitem);
         </div>
         
         <div>
-        <iframe name="iframe_view" src="" title="cartjob"></iframe>
+        <iframe name="iframe_view" src="" title="cartjob" class="iframe"></iframe>
         </div>
     
     </div></div>

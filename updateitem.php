@@ -23,7 +23,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $stmt->bind_param("sssi",  $itemsname,  $discription, $price, $_COOKIE['itemidcookie']);
     if($stmt->execute()){
         setcookie('itemidcookie','',time()-50000);
-    }
+        header("location:Companyhm.php");}
 
     $message = "Record Modified Successfully";
     }

@@ -94,8 +94,10 @@ if($stmt = $mysqli->prepare($sql)){
                 <br>
 
                 <div>
-                    <input class="but" type="submit" value="Submit">
-                    <input class="but" type="reset" value="Reset">
+                    <button class="btn"><input class="but" type="submit" value="Submit"></button>&nbsp;&nbsp;&nbsp;
+                    <button class="btn"><input class="but" type="reset" value="Reset"></button>
+                    
+                    
                 </div>
                 <span class="err"><?php echo $msg; ?></span>
             </form>

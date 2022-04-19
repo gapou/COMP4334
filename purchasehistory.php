@@ -74,7 +74,7 @@ $rowusers = mysqli_fetch_array($resultusers);
         </div>
         
         <div>
-        <iframe name="iframe_view" src="" title="view"></iframe>
+        <iframe name="iframe_view" src="" title="view" class="iframe"></iframe>
         </div>
     
     </div>

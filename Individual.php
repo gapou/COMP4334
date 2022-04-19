@@ -46,7 +46,7 @@ $resultjob = $mysqli->query($sql);
             <?php
             if($resultjob -> num_rows >0){
             ?>
-            <table class="job">
+            <table class="job" data-aos="fade-up" data-aos-duration="1500">
                 <tr>
                     <th>Company</th>
                     <th>Job_Title</th>

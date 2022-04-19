@@ -21,14 +21,15 @@ $row= mysqli_fetch_array($result);
 
 <div>
     <?php include('usernav.php'); ?>
-    <div class="container">
+    <div class="container container-card2" data-aos="zoom-in" data-aos-duration="1500">
+    <div class="card">
     <div class= "leftuser">
         <img class="profile" src=<?php echo $filename; ?> alt="" width="100" height="100"width="100" height="100">
     </div>
 
 
     <div class= "rightuser">
-        <table>
+        <table class="info-table">
         <tr>
             <th>Username:</th>
             <td><?php echo $row["username"]; ?></td>
@@ -50,9 +51,11 @@ $row= mysqli_fetch_array($result);
             <td><?php echo $row["address"]; ?></td>
         </tr>
         </table>
-        <a href="updateinfo.php?userid=<?php echo $row["uid"]; ?>">Update Info</a><br>
+        <br>
+        <button class="btn"><a href="updateinfo.php?userid=<?php echo $row["uid"]; ?>">Update Info</a></button>
+        
 
-
+</div>
     </div>
     </div>
     

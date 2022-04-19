@@ -20,8 +20,19 @@ $row= mysqli_fetch_array($result);
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="container container-card item-table">
+        
+    
 
+    
     <table>
+    <tr>
+            <th colspan="2">
+            <img class="profile" src=<?php echo $filename.$row["photo_img"]; ?> alt="" width="100" height="100">
+            </th>
+
+        </tr>
+
         <tr>
             <th>
             Items ID:
@@ -56,21 +67,20 @@ $row= mysqli_fetch_array($result);
             </th>
             <td>
             <?php echo $row['price']; ?>
-            </td>
+            </td><br>
         </tr>
-
+            
         <tr>
-            <th>
-            Photo:
+            <th colspan="2">
+            <button type="button" class="btn"><a href="addtocart.php?itemid=<?php echo $row["itemid"]; ?>">Add to cart</a></button><br><br>
             </th>
-            <td>
-            <img class="profile" src=<?php echo $filename.$row["photo_img"]; ?> alt="" width="100" height="100">
-            </td>
+
         </tr>
 
     </table>
-    <a href="addtocart.php?itemid=<?php echo $row["itemid"]; ?>">Add to cart</a>
+
     
     
+    </div>
 </body>
 </html>

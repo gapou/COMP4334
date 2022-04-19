@@ -34,9 +34,11 @@ $resultitem = $mysqli->query($sql);
     <?php include('comnav.php'); ?>
     <div class="container" >
     <h2> Welcome! <?php echo "User Name/Company: " . $rowusers["username"] ?> </h2>
-    <a href="uploaditems.php">Upload Items</a>
+    <div class="item-col-ar">
+    <button class="btn"><a href="uploaditems.php">Upload Items</a></button>
     <br>
-    <a href="purchasehistorycom.php">Purchase History</a>
+    <button class="btn"><a href="purchasehistorycom.php">Purchase History</a></button>
+    </div>
     <h3> Your Items:</h3>
 
 
@@ -63,9 +65,9 @@ $resultitem = $mysqli->query($sql);
                     <td> <?php echo $rowitems["name"];?></td>
                     <td><?php echo $rowitems["discription"];?></td>
                     <td>$<?php echo $rowitems["price"];?></td>
-                    <td><a href="updateitem.php?itemid=<?php echo $rowitems["itemid"]; ?>">Update</a></td>
-                    <td><a href="deleteitems.php?itemid=<?php echo $rowitems["itemid"]; ?>">Delete</a></td>
-                    <td><a href="itempurchase.php?itemid=<?php echo $rowitems["itemid"]; ?>">History</a></td>
+                    <td><button class="btn"><a href="updateitem.php?itemid=<?php echo $rowitems["itemid"]; ?>">Update</a></button></td>
+                    <td><button class="btn"><a href="deleteitems.php?itemid=<?php echo $rowitems["itemid"]; ?>">Delete</a></button></td>
+                    <td><button class="btn"><a href="itempurchase.php?itemid=<?php echo $rowitems["itemid"]; ?>">History</a></button></td>
                     </tr>
                 <?php
 			    $countrow++;
