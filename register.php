@@ -58,11 +58,36 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $nickname = trim($_POST['nickname']);
     }
 
+    /*// Validate password strength
+
     // Validate password
     if(empty(trim($_POST['password']))){
         $password_err = "Please enter a password.";     
-    } elseif(strlen(trim($_POST['password'])) < 6){
+    }elseif(strlen(trim($_POST['password'])) < 6){
         $password_err = "Password must have atleast 6 characters.";
+    }elseif(!preg_match('@[A-Z]@', $_POST['password'])) {
+        $password_err = "Password should be at least one upper case letter";
+    }elseif(!preg_match('@[a-z]@', $_POST['password'])) {
+        $password_err = "Password should be at least one lower case letter.";
+    }elseif(!preg_match('@[0-9]@', $_POST['password'])) {
+        $password_err = "Password should be at least one number.";
+    }elseif(!preg_match('@[^\w]@', $_POST['password'])) {
+        $password_err = "Password should be at least one special character.";
+    }else{
+        $password_err = "Strong password.";
+        $password = trim($_POST['password']);
+    }*/
+    
+    // Validate password strength
+    $uppercase = preg_match('@[A-Z]@', $_POST['password']);
+    $lowercase = preg_match('@[a-z]@', $_POST['password']);
+    $number    = preg_match('@[0-9]@', $_POST['password']);
+    $specialChars = preg_match('@[^\w]@', $_POST['password']);
+    // Validate password
+    if(empty(trim($_POST['password']))){
+        $password_err = "Please enter a password.";     
+    } elseif(!$uppercase || !$lowercase || !$number || !$specialChars || strlen(trim($_POST['password'])) < 6){
+        $password_err = "Password should be at least 6 characters in length and should include at least one upper case letter, one number, and one special character.";
     } else{
         $password = trim($_POST['password']);
     }

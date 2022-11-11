@@ -11,6 +11,10 @@ a {
 input {
   border: 0;
   outline: 0;
+  background-color: rgba(46, 95, 95, 0.336);
+  color: #252525;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
 }
 .overlay1 {
   background: url("img/home.jpg") no-repeat center center;
@@ -93,8 +97,8 @@ input {
   justify-content: center;
   padding: 20px;
   margin-top: 20vh;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  background: #f7cc9e;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  background-color: rgba(249, 194, 132, 0.25);
   border-radius: 50px;
   transition: 0.5s ease-out;
 }
@@ -102,8 +106,8 @@ input {
   justify-content: center;
   padding: 20px;
   margin: 10px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  background: #f7cc9e;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  background-color: rgba(249, 194, 132, 0.25);
   border-radius: 50px;
   transition: 0.5s ease-out;
   width: 40vw;
@@ -112,7 +116,9 @@ input {
   overflow: hidden;
   background-color: rgb(255, 255, 255);
 }
-
+.err {
+  color: red;
+}
 .navbar a {
   float: left;
   font-size: 16px;
